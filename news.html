@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Музыкальный портал — Новости</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f5f9fc;
+      color: #000;
+    }
+    header {
+      background-color: #eaf3fb;
+    }
+    .btn-subscribe {
+      background-color: #cce4f6;
+      border: none;
+      color: #000;
+    }
+    .btn-subscribe:hover {
+      background-color: #b3d7f2;
+    }
+    .btn-login {
+      background-color: #a9d0f5;
+      border: none;
+      color: #000;
+    }
+    .btn-login:hover {
+      background-color: #8fc4f2;
+    }
+    footer {
+      background-color: #eaf3fb;
+      color: #000;
+    }
+    .sidebar {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .sidebar a {
+      color: #000;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      padding: 10px 5px;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+    .sidebar a:hover {
+      background-color: #eaf3fb;
+    }
+    .sidebar i {
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+    .card-img-top {
+  max-height: 200px;    /* ограничиваем высоту картинки */
+  object-fit: cover;    /* картинка обрезается под размер, а не растягивается */
+  border-radius: 8px;   /* скругление углов для красоты */
+}
+
+    .news-card img {
+      border-radius: 10px 10px 0 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="container-fluid shadow-sm">
+    <div class="container">
+      <div class="row align-items-center py-3">
+        <!-- ЛОГОТИП -->
+        <div class="col-4 col-md-2 d-flex justify-content-start">
+          <a href="index.html">
+            <img src="img/Логотип-1.png" alt="Логотип" class="img-fluid" style="max-height: 40px;">
+          </a>
+        </div>
+        <!-- НАВИГАЦИЯ + ПОИСК -->
+        <div class="col-12 col-md-8 d-flex justify-content-center align-items-center flex-wrap mt-2 mt-md-0">
+          <nav class="nav">
+            <a href="index.html" class="nav-link text-dark">Главная</a>
+            <a href="radio.html" class="nav-link text-dark">Радио</a>
+            <a href="news.html" class="nav-link text-dark fw-bold">Новости</a>
+            <a href="audiobook.html" class="nav-link text-dark">Аудиокниги</a>
+          </nav>
+          <form class="d-flex ms-3 mt-2 mt-md-0" role="search">
+            <input class="form-control form-control-sm" type="search" placeholder="Поиск" aria-label="Поиск">
+          </form>
+        </div>
+<!-- КНОПКИ -->
+<div class="col-8 col-md-2 d-flex justify-content-end gap-2 mt-2 mt-md-0">
+  <a href="login.html" class="btn btn-login btn-sm">Войти</a>
+</div>
+
+    </div>
+  </header>
+
+  <!-- ОСНОВНОЙ КОНТЕНТ -->
+  <main class="container my-5">
+    <div class="row">
+      <!-- БОКОВАЯ ПАНЕЛЬ -->
+      <aside class="col-12 col-md-4 col-lg-3 mb-4">
+        <div class="sidebar">
+          <a href="mymusic.html"><i class="bi bi-music-note-beamed"></i> Моя музыка</a>
+          <a href="radio.html"><i class="bi bi-list-ul"></i> Радио</a>
+          <a href="news.html"><i class="bi bi-disc"></i> Новости</a>
+          <a href="audiobook.html"><i class="bi bi-graph-up"></i> Аудиокниги</a>
+          <a href="conf.html"><i class="bi bi-stars"></i> Политика конф.</a>
+        </div>
+      </aside>
+
+      <!-- НОВОСТИ -->
+      <section class="col-12 col-md-8 col-lg-9">
+        <h2 class="mb-4">Музыкальные новости</h2>
+        <div class="row row-cols-1 g-4">
+
+          <!-- Новость 1 -->
+          <div class="col">
+            <div class="card shadow-sm news-card">
+              <img src="img/news1.jpg" class="card-img-top" alt="Новость 1">
+              <div class="card-body">
+                <h5 class="card-title">Новый альбом группы XYZ</h5>
+                <p class="card-text">Группа XYZ выпустила новый альбом, который уже называют лучшей работой в их карьере.</p>
+                <a href="#" class="btn btn-outline-primary btn-sm">Читать далее</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Новость 2 -->
+          <div class="col">
+            <div class="card shadow-sm news-card">
+              <img src="img/news2.jpg" class="card-img-top" alt="Новость 2">
+              <div class="card-body">
+                <h5 class="card-title">Фестиваль в Москве</h5>
+                <p class="card-text">На ВДНХ стартовал крупнейший фестиваль с участием более 50 артистов со всего мира.</p>
+                <a href="#" class="btn btn-outline-primary btn-sm">Читать далее</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Новость 3 -->
+          <div class="col">
+            <div class="card shadow-sm news-card">
+              <img src="img/news3.jpg" class="card-img-top" alt="Новость 3">
+              <div class="card-body">
+                <h5 class="card-title">Сингл покорил чарты</h5>
+                <p class="card-text">Трек «Summer Vibes» занял первое место в мировых чартах всего за неделю.</p>
+                <a href="#" class="btn btn-outline-primary btn-sm">Читать далее</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Новость 4 -->
+          <div class="col">
+            <div class="card shadow-sm news-card">
+              <img src="img/news4.jpg" class="card-img-top" alt="Новость 4">
+              <div class="card-body">
+                <h5 class="card-title">Коллаборация года</h5>
+                <p class="card-text">Два легендарных исполнителя объединились и выпустили совместный трек, который взорвал соцсети.</p>
+                <a href="#" class="btn btn-outline-primary btn-sm">Читать далее</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Новость 5 -->
+          <div class="col">
+            <div class="card shadow-sm news-card">
+              <img src="img/news5.jpg" class="card-img-top" alt="Новость 5">
+              <div class="card-body">
+                <h5 class="card-title">Гастроли по Европе</h5>
+                <p class="card-text">Артист ABC отправляется в масштабный европейский тур, билеты уже в продаже.</p>
+                <a href="#" class="btn btn-outline-primary btn-sm">Читать далее</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Новость 6 -->
+          <div class="col">
+            <div class="card shadow-sm news-card">
+              <img src="img/news6.jpg" class="card-img-top" alt="Новость 6">
+              <div class="card-body">
+                <h5 class="card-title">Музыкальные награды</h5>
+                <p class="card-text">На премии Music Awards 2025 победителями стали новые имена индустрии.</p>
+                <a href="#" class="btn btn-outline-primary btn-sm">Читать далее</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Новость 7 -->
+          <div class="col">
+            <div class="card shadow-sm news-card">
+              <img src="img/news7.jpg" class="card-img-top" alt="Новость 7">
+              <div class="card-body">
+                <h5 class="card-title">Возвращение легенды</h5>
+                <p class="card-text">После долгого молчания артист DEF представил новую песню и анонсировал альбом.</p>
+                <a href="#" class="btn btn-outline-primary btn-sm">Читать далее</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Новость 8 -->
+          <div class="col">
+            <div class="card shadow-sm news-card">
+              <img src="img/news8.jpg" class="card-img-top" alt="Новость 8">
+              <div class="card-body">
+                <h5 class="card-title">Рекорд стриминга</h5>
+                <p class="card-text">Песня «Energy» побила рекорд прослушиваний на всех стриминговых сервисах.</p>
+                <a href="#" class="btn btn-outline-primary btn-sm">Читать далее</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ПОДВАЛ -->
+  <footer class="container-fluid bg-light text-dark mt-5 pt-4 pb-2 border-top">
+    <div class="container">
+      <div class="row">
+        <!-- ЛЕВО -->
+        <div class="col-12 col-md-4 mb-3 d-flex flex-column align-items-start">
+          <h6 class="fw-bold mb-3">Мы в соцсетях</h6>
+          <div class="d-flex gap-3">
+            <a href="#"><img src="img/icon_tg.png" alt="Telegram" width="28"></a>
+            <a href="#"><img src="img/icon_vk.png" alt="VK" width="28"></a>
+            <a href="#"><img src="img/icon_app.png" alt="App Store" width="28"></a>
+            <a href="#"><img src="img/icon_google.png" alt="Google Play" width="28"></a>
+            <a href="#"><img src="img/icon_mail.png" alt="Mail" width="28"></a>
+          </div>
+        </div>
+        <!-- ЦЕНТР -->
+        <div class="col-12 col-md-4 mb-3 text-center">
+          <h6 class="fw-bold mb-3">Пользователям</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-dark text-decoration-none">Пользовательское соглашение</a></li>
+            <li><a href="#" class="text-dark text-decoration-none">Политика конфиденциальности</a></li>
+            <li><a href="#" class="text-dark text-decoration-none">Правила рекомендаций</a></li>
+            <li><a href="#" class="text-dark text-decoration-none">Приложение</a></li>
+            <li><a href="#" class="text-dark text-decoration-none">Подписка</a></li>
+            <li><a href="mailto:anton@mail.com" class="text-dark text-decoration-none">Поддержка: anton@mail.com</a></li>
+          </ul>
+        </div>
+        <!-- ПРАВО -->
+        <div class="col-12 col-md-4 mb-3 text-end">
+          <h6 class="fw-bold mb-3">Партнёрам</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-dark text-decoration-none">Правообладателям</a></li>
+            <li><a href="#" class="text-dark text-decoration-none">Реклама на сайте</a></li>
+            <li><a href="#" class="text-dark text-decoration-none">Заключить лицензионное соглашение с AntonMusic</a></li>
+            <li><a href="#" class="text-dark text-decoration-none">Разместить свою музыку на AntonMusic</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- НИЗ -->
+      <div class="row mt-4">
+        <div class="col text-center small text-muted">
+          <p class="mb-1">Зарегистрированный товарный знак АнтонМюзик / AntonMusic 2004-2025</p>
+          <p class="mb-1">125315, Москва, ул. Антона Кириллова, вход, 1 этаж</p>
+          <p class="mb-1">Тел.: +7 (718) 281 21 23</p>
+          <p class="mb-0">Сайт: Антонов Кирилл Ир3-22</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

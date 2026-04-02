@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моя музыка</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f5f9fc;
+      color: #000;
+    }
+    header {
+      background-color: #eaf3fb;
+    }
+    .btn-subscribe {
+      background-color: #cce4f6;
+      border: none;
+      color: #000;
+    }
+    .btn-subscribe:hover {
+      background-color: #b3d7f2;
+    }
+    .btn-login {
+      background-color: #a9d0f5;
+      border: none;
+      color: #000;
+    }
+    .btn-login:hover {
+      background-color: #8fc4f2;
+    }
+    footer {
+      background-color: #eaf3fb;
+      color: #000;
+    }
+    .sidebar {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .sidebar a {
+      color: #000;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      padding: 10px 5px;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+    .sidebar a:hover {
+      background-color: #eaf3fb;
+    }
+    .sidebar i {
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+    .block {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .track-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+    .track-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .track-icon {
+      font-size: 1.5rem;
+      color: #0d6efd;
+    }
+    .filter-btn {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ШАПКА -->
+<header class="container-fluid shadow-sm">
+  <div class="container">
+    <div class="row align-items-center py-3">
+      <div class="col-4 col-md-2 d-flex justify-content-start">
+        <a href="index.html">
+          <img src="img/Логотип-1.png" alt="Логотип" class="img-fluid" style="max-height: 40px;">
+        </a>
+      </div>
+      <div class="col-12 col-md-8 d-flex justify-content-center align-items-center flex-wrap mt-2 mt-md-0">
+        <nav class="nav">
+          <a href="index.html" class="nav-link text-dark">Главная</a>
+          <a href="radio.html" class="nav-link text-dark">Радио</a>
+          <a href="news.html" class="nav-link text-dark">Новости</a>
+          <a href="audiobook.html" class="nav-link text-dark">Аудиокниги</a>
+        </nav>
+        <form class="d-flex ms-3 mt-2 mt-md-0" role="search">
+          <input class="form-control form-control-sm" type="search" placeholder="Поиск" aria-label="Поиск">
+        </form>
+      </div>
+      <div class="col-8 col-md-2 d-flex justify-content-end gap-2 mt-2 mt-md-0">
+        <a href="login.html" class="btn btn-login btn-sm">Войти</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ОСНОВНОЙ КОНТЕНТ -->
+<main class="container my-5">
+  <div class="row">
+    <!-- БОКОВАЯ ПАНЕЛЬ -->
+    <aside class="col-12 col-md-4 col-lg-3 mb-4">
+      <div class="sidebar">
+        <a href="mymusic.html"><i class="bi bi-music-note-beamed"></i> Моя музыка</a>
+        <a href="radio.html"><i class="bi bi-list-ul"></i> Радио</a>
+        <a href="news.html"><i class="bi bi-disc"></i> Новости</a>
+        <a href="audiobook.html"><i class="bi bi-graph-up"></i> Аудиокниги</a>
+        <a href="conf.html"><i class="bi bi-stars"></i> Политика конф.</a>
+      </div>
+    </aside>
+
+    <!-- КОНТЕНТ -->
+    <section class="col-12 col-md-8 col-lg-9">
+
+      <!-- Блок 1: Моя музыка -->
+      <div class="block d-flex align-items-center">
+        <img src="img/my.jpg" alt="Моя музыка" class="img-fluid" style="width: 120px; height: 120px; object-fit: cover; border-radius: 12px;">
+        <div class="ms-3">
+          <h3>Моя Музыка</h3>
+          <button class="btn btn-primary mt-2">Слушать</button>
+        </div>
+      </div>
+
+      <!-- Блок 2: Поиск -->
+      <div class="block">
+        <input type="text" class="form-control" placeholder="Поиск по трекам">
+      </div>
+
+      <!-- Блок 3: Фильтры -->
+      <div class="block">
+        <button class="btn btn-outline-primary filter-btn">Рэп</button>
+        <button class="btn btn-outline-primary filter-btn">Рок</button>
+        <button class="btn btn-outline-primary filter-btn">Шансон</button>
+      </div>
+
+      <!-- Блок 4: Музыка -->
+      <div class="block">
+        <div class="track-item">
+          <div class="track-info">
+            <i class="bi bi-music-note-beamed track-icon"></i>
+            <div>
+              <strong>АУФ</strong><br>
+              <small>SqwozBab</small>
+            </div>
+          </div>
+          <audio controls preload="none" style="height: 30px;">
+            <source src="music/АУФ.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="track-item">
+          <div class="track-info">
+            <i class="bi bi-music-note-beamed track-icon"></i>
+            <div>
+              <strong>Гипноденсер</strong><br>
+              <small>Маленький Большой</small>
+            </div>
+          </div>
+          <audio controls preload="none" style="height: 30px;">
+            <source src="music/Гипноденсер.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="track-item">
+          <div class="track-info">
+            <i class="bi bi-music-note-beamed track-icon"></i>
+            <div>
+              <strong>Плачу на Техно</strong><br>
+              <small>CreamSoda, Группа Хлеб</small>
+            </div>
+          </div>
+          <audio controls preload="none" style="height: 30px;">
+            <source src="music/Плачу на Техно.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+
+    </section>
+  </div>
+</main>
+
+<!-- ПОДВАЛ -->
+<footer class="container-fluid bg-light text-dark mt-5 pt-4 pb-2 border-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4 mb-3 d-flex flex-column align-items-start">
+        <h6 class="fw-bold mb-3">Мы в соцсетях</h6>
+        <div class="d-flex gap-3">
+          <a href="#"><img src="img/icon_tg.png" alt="Telegram" width="28"></a>
+          <a href="#"><img src="img/icon_vk.png" alt="VK" width="28"></a>
+          <a href="#"><img src="img/icon_app.png" alt="App Store" width="28"></a>
+          <a href="#"><img src="img/icon_google.png" alt="Google Play" width="28"></a>
+          <a href="#"><img src="img/icon_mail.png" alt="Mail" width="28"></a>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 mb-3 text-center">
+        <h6 class="fw-bold mb-3">Пользователям</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-dark text-decoration-none">Пользовательское соглашение</a></li>
+          <li><a href="#" class="text-dark text-decoration-none">Политика конфиденциальности</a></li>
+          <li><a href="#" class="text-dark text-decoration-none">Правила рекомендаций</a></li>
+          <li><a href="#" class="text-dark text-decoration-none">Приложение</a></li>
+          <li><a href="#" class="text-dark text-decoration-none">Подписка</a></li>
+          <li><a href="mailto:anton@mail.com" class="text-dark text-decoration-none">Поддержка: anton@mail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-md-4 mb-3 text-end">
+        <h6 class="fw-bold mb-3">Партнёрам</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-dark text-decoration-none">Правообладателям</a></li>
+          <li><a href="#" class="text-dark text-decoration-none">Реклама на сайте</a></li>
+          <li><a href="#" class="text-dark text-decoration-none">Заключить лицензионное соглашение с AntonMusic</a></li>
+          <li><a href="#" class="text-dark text-decoration-none">Разместить свою музыку на AntonMusic</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col text-center small text-muted">
+        <p class="mb-1">Зарегистрированный товарный знак АнтонМюзик / AntonMusic 2004-2025</p>
+        <p class="mb-1">125315, Москва, ул. Антона Кириллова, вход, 1 этаж</p>
+        <p class="mb-1">Тел.: +7 (718) 281 21 23</p>
+        <p class="mb-0">Сайт: Антонов Кирилл Ир3-22</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
